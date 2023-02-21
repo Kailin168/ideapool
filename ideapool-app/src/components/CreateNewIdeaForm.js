@@ -9,8 +9,8 @@ function CreateNewIdeaForm({ addNewIdea }) {
   const [ideaText, setIdeaText] = useState("");
   const [category, setCategory] = useState("");
   const [publicView, setPublicView] = useState(false);
-  const [user_id, setUser_id] = useState(1);
-  const [likes, setLikes] = useState(0);
+  // const [user_id, setUser_id] = useState(1);
+  // const [likes, setLikes] = useState(0);
 
 
   const handleSubmit = (event) => {

@@ -8,13 +8,13 @@ function ListOfIdeas({ ideas }) {
     <ListGroup as="ol" numbered>
       {ideas?.map((idea) => (
         <ListGroup.Item
-          key={idea}
+          key={idea.id}
           as="li"
           className="d-flex justify-content-between align-items-start"
         >
           <div className="ms-2 me-auto">
             <div className="fw-bold">Ideas</div>
-            {idea}
+            {idea.content}
           </div>
           <BsFillArrowUpCircleFill />{' '}
           <BsFillArrowDownCircleFill />{' '}
