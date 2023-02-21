@@ -3,10 +3,18 @@ import CreateNewIdeaForm from "./CreateNewIdeaForm";
 import ListOfIdeas from "./ListOfIdeas";
 
 function IdeaContainer() {
+
+  const [ideas, setIdeas] = React.useState([]);
+
+
+  const addNewIdea = (idea) => {
+    setIdeas([...ideas, idea]);
+  };
+
   return (
     <div>
-      <CreateNewIdeaForm />
-      <ListOfIdeas />
+      <CreateNewIdeaForm addNewIdea={addNewIdea}/>
+      <ListOfIdeas ideas={ideas}/>
     </div>
   );
 }

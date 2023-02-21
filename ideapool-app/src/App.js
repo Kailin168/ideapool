@@ -5,7 +5,7 @@ import IdeaContainer from "./components/IdeaContainer";
 function App() {
   return (
     <div className="App">
-      HELLO WORLD
+      Welcome to your idea board!
       <IdeaContainer />
     </div>
   );

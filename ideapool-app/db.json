@@ -1,0 +1,101 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "content": "My first post",
+      "category": "Science",
+      "public": "true",
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 2,
+      "content": "My second post",
+      "category": "Art",
+      "public": "true",
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 3,
+      "content": "My third post",
+      "category": "Math",
+      "public": "true",
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": "2019-01-01 00:00:00"
+    },
+    {
+      "content": "test 3",
+      "category": "",
+      "public": false,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1676996270567,
+      "id": 4
+    },
+    {
+      "content": "sdas",
+      "category": "math",
+      "public": false,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1676997273212,
+      "id": 5
+    },
+    {
+      "content": "dasd",
+      "category": "math",
+      "public": false,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1676997695581,
+      "id": 6
+    },
+    {
+      "content": "dsads",
+      "category": "Technology",
+      "public": false,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1676998188545,
+      "id": 7
+    },
+    {
+      "content": "dasds",
+      "category": "Art",
+      "public": true,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1676999380195,
+      "id": 8
+    },
+    {
+      "content": "das",
+      "category": "Art",
+      "public": false,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1676999386778,
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "password",
+      "timestamps": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 2,
+      "name": "Jane Coltrane",
+      "email": "JaneColtrane@gmail.com",
+      "password": "password",
+      "timestamps": "2019-01-01 00:00:00"
+    }
+  ]
+}
