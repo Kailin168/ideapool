@@ -80,6 +80,42 @@
       "likes": "0",
       "timestamps": 1676999386778,
       "id": 9
+    },
+    {
+      "content": "idea 2eew",
+      "category": "Math",
+      "public": true,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1677025007448,
+      "id": 10
+    },
+    {
+      "content": "dsfdffg",
+      "category": "Math",
+      "public": true,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1677025011554,
+      "id": 11
+    },
+    {
+      "content": "erwerefefg",
+      "category": "Math",
+      "public": true,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1677025014615,
+      "id": 12
+    },
+    {
+      "content": "sfdefewf",
+      "category": "Math",
+      "public": true,
+      "user_id": "1",
+      "likes": "0",
+      "timestamps": 1677025017359,
+      "id": 13
     }
   ],
   "users": [
