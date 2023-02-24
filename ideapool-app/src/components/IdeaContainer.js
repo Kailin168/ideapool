@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MySpinner from "../commons/Spinner";
 import CreateNewIdeaForm from "./CreateNewIdeaForm";
 import ListOfIdeas from "./ListOfIdeas";
 import SearchBar from "./SearchBar";
@@ -21,7 +22,7 @@ function IdeaContainer() {
   return (
     <div>
       <CreateNewIdeaForm addNewIdea={addNewIdea} />
-      { ideas.length !== 0 && <ListOfIdeas ideas={ideas} /> }
+      { ideas.length !== 0 && <ListOfIdeas ideas={ideas} setIdeas={setIdeas}/> }
       <SearchBar ideas={ideas}/>
     </div>
   );

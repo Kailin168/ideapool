@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "content": "My first post",
+      "content": "12318512",
       "category": "Science",
       "public": "true",
       "user_id": "1",
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "content": "My second post",
+      "content": "My first testing",
       "category": "Art",
       "public": "true",
       "user_id": "1",
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "content": "My third post",
+      "content": "My ",
       "category": "Math",
       "public": "true",
       "user_id": "1",
@@ -28,7 +28,7 @@
       "timestamps": "2019-01-01 00:00:00"
     },
     {
-      "content": "test 3",
+      "content": "My fst asdasd",
       "category": "",
       "public": false,
       "user_id": "1",
@@ -37,7 +37,7 @@
       "id": 4
     },
     {
-      "content": "sdas",
+      "content": "My first sdasd",
       "category": "math",
       "public": false,
       "user_id": "1",
@@ -46,7 +46,7 @@
       "id": 5
     },
     {
-      "content": "dasd",
+      "content": "Mt post asdasd",
       "category": "math",
       "public": false,
       "user_id": "1",
@@ -55,7 +55,7 @@
       "id": 6
     },
     {
-      "content": "dsads",
+      "content": "rst post asdasd",
       "category": "Technology",
       "public": false,
       "user_id": "1",
@@ -64,7 +64,7 @@
       "id": 7
     },
     {
-      "content": "dasds",
+      "content": "My first po123",
       "category": "Art",
       "public": true,
       "user_id": "1",
@@ -73,7 +73,7 @@
       "id": 8
     },
     {
-      "content": "das",
+      "content": "My first post asdasd",
       "category": "Art",
       "public": false,
       "user_id": "1",
@@ -82,7 +82,7 @@
       "id": 9
     },
     {
-      "content": "idea 2eew",
+      "content": "1846515",
       "category": "Math",
       "public": true,
       "user_id": "1",
@@ -91,7 +91,7 @@
       "id": 10
     },
     {
-      "content": "dsfdffg",
+      "content": "My",
       "category": "Math",
       "public": true,
       "user_id": "1",
@@ -100,7 +100,7 @@
       "id": 11
     },
     {
-      "content": "erwerefefg",
+      "content": "Mfsdfdsfdd",
       "category": "Math",
       "public": true,
       "user_id": "1",
@@ -109,7 +109,7 @@
       "id": 12
     },
     {
-      "content": "sfdefewf",
+      "content": "ghfghgfh",
       "category": "Math",
       "public": true,
       "user_id": "1",

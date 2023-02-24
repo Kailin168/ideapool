@@ -5,7 +5,7 @@ import EditModal from './EditModal';
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
-function ListOfIdeas({ ideas }) {
+function ListOfIdeas({ ideas, setIdeas }) {
 
   const [sortKey, setSortKey] = useState('content');
 
@@ -40,7 +40,7 @@ function ListOfIdeas({ ideas }) {
               <div className="fw-bold">Ideas</div>
               {idea.content}
               {idea.category}
-              < EditModal idea={idea} />
+              < EditModal idea={idea} setIdeas={setIdeas} />
             </div>
             <BsFillArrowUpCircleFill />{' '}
             <BsFillArrowDownCircleFill />{' '}
