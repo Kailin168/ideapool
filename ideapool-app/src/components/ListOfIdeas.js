@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
-// import SortDropdown from './SortDropDown';
+import EditModal from './EditModal';
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
@@ -40,6 +40,7 @@ function ListOfIdeas({ ideas }) {
               <div className="fw-bold">Ideas</div>
               {idea.content}
               {idea.category}
+              < EditModal idea={idea} />
             </div>
             <BsFillArrowUpCircleFill />{' '}
             <BsFillArrowDownCircleFill />{' '}
