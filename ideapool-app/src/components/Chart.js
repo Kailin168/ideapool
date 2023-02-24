@@ -6,7 +6,7 @@ function Chart() {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/posts')
+    fetch('http://localhost:4000/posts')
       .then(response => response.json())
       .then(data => { 
         const dict = {};
