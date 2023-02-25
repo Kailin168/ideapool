@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MySpinner from "../commons/Spinner";
+// import MySpinner from "../commons/Spinner";
 import CreateNewIdeaForm from "./CreateNewIdeaForm";
 import ListOfIdeas from "./ListOfIdeas";
 import SearchBar from "./SearchBar";
