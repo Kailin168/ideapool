@@ -22,8 +22,8 @@ function IdeaContainer() {
   return (
     <div>
       <CreateNewIdeaForm addNewIdea={addNewIdea} />
-      { ideas.length !== 0 && <ListOfIdeas ideas={ideas} setIdeas={setIdeas}/> }
       <SearchBar ideas={ideas}/>
+      { ideas.length !== 0 && <ListOfIdeas ideas={ideas} setIdeas={setIdeas}/> }
     </div>
   );
 }

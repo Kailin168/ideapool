@@ -34,7 +34,6 @@ function App() {
   return (
     <div className="App">
       Welcome to your idea board!
-
       <TopNavBar />
       <Routes>
         <Route path="/" element={<IdeaContainer />} />
