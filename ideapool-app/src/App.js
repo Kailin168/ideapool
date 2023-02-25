@@ -3,6 +3,7 @@ import IdeaContainer from "./components/IdeaContainer";
 import Chart from "./components/Chart";
 import ContactPage from "./ContactPage";
 import { Routes, Route } from "react-router-dom";
+import TopNavBar from "./components/TopNavBar";
 
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
@@ -34,7 +35,7 @@ function App() {
     <div className="App">
       Welcome to your idea board!
 
-
+      <TopNavBar />
       <Routes>
         <Route path="/" element={<IdeaContainer />} />
         <Route path="/ContactPage" element={<ContactPage />} />
