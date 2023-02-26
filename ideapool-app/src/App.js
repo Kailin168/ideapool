@@ -34,8 +34,7 @@ function App() {
   //     </LineChart>
   //   )
   // }
-
-
+ 
   useEffect(() => {
     fetch('http://localhost:4000/users/1')
       .then(response => response.json())
