@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IdeaContainer from "./components/IdeaContainer";
 import Chart from "./components/Chart";
 import ContactPage from "./ContactPage";
+import ProfileSetting from "./ProfileSetting";
 import { Routes, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
 import MyContext from "./context/MyContext";
@@ -9,6 +10,8 @@ import MyContext from "./context/MyContext";
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 function App() {
+
+  const [user, setUser] = useState({})
 
   // const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
 
@@ -31,18 +34,30 @@ function App() {
   //     </LineChart>
   //   )
   // }
+  const userDetail = () => {
+    fetch('http://localhost:4000/users/1')
+      .then(response => response.json())
+      .then(data => setUser(data));
+  }
 
-  const sharedValue = 'Hello, world!';
+ useEffect(() => {
+    userDetail();
+  }, []);
+
+  
+
+  const contextData = { setUser , user};
 
 
   return (
-    <MyContext.Provider value={sharedValue}>
+    <MyContext.Provider value={contextData}>
       Welcome to your idea board!
       <TopNavBar />
       <Routes>
         <Route path="/" element={<IdeaContainer />} />
         <Route path="/ContactPage" element={<ContactPage />} />
         <Route path="/chart" element={<Chart />} />
+        <Route path="/profilesetting" element={<ProfileSetting />} />
       </Routes>
 
       {/* <Chart /> { /* this is the component, must have return and export default */}
