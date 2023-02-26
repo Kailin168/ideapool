@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import IdeaContainer from "./components/IdeaContainer";
 import Chart from "./components/Chart";
-import ContactPage from "./ContactPage";
-import ProfileSetting from "./ProfileSetting";
+import ContactPage from "./components/ContactPage";
+import ProfileSetting from "./components/ProfileSetting";
 import { Routes, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
 import MyContext from "./context/MyContext";
@@ -52,13 +52,13 @@ function App() {
       <TopNavBar />
       <Routes>
         <Route path="/" element={<IdeaContainer />} />
-        <Route path="/ContactPage" element={<ContactPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/chart" element={<Chart />} />
-        <Route path="/profilesetting" element={<ProfileSetting />} />
+        <Route path="/profile" element={<ProfileSetting />} />
       </Routes>
 
       {/* <Chart /> { /* this is the component, must have return and export default */}
-      {/* {test}  this is just a variable, and doesnt need a return, this is using the value directly */}
+      {/* {test}  this is just a variable, and doesn't need a return, this is using the value directly */}
       {/* <Test2 test={"a"} />   this is the exact same thing as below, except this is written as HTML component*/}
       {/* {Test2({test: "a"})} This is written as a function, taking in test: a as a object prop */}
     </MyContext.Provider>

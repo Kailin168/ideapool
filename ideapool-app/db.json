@@ -121,7 +121,7 @@
   "users": [
     {
       "id": 1,
-      "name": "John Doe",
+      "name": "John Doe testing",
       "email": "johndoe@gmail.com",
       "password": "password",
       "timestamps": "2019-01-01 00:00:00"

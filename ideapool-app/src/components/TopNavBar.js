@@ -16,8 +16,9 @@ function TopNavBar() {
           <Navbar.Brand href="#home">IDEA POOL</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="Chart">Chart</Nav.Link>
-            <Nav.Link href="ContactPage">Contact</Nav.Link>
+            <Nav.Link href="/chart">Chart</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/profile">Profile</Nav.Link>
             <p style={{background: "white" }}>{contextData.user.name}</p>
           </Nav>
         </Container>
