@@ -7,7 +7,7 @@ import MyContext from '../context/MyContext';
 
 function TopNavBar() {
 
-  const sharedValue = useContext(MyContext);
+  const contextData = useContext(MyContext);
 
   return (
     <>
@@ -18,7 +18,7 @@ function TopNavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="Chart">Chart</Nav.Link>
             <Nav.Link href="ContactPage">Contact</Nav.Link>
-            <p style={{background: "white" }}>{sharedValue}</p>
+            <p style={{background: "white" }}>{contextData.user.name}</p>
           </Nav>
         </Container>
       </Navbar>
