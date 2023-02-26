@@ -4,6 +4,7 @@ import Chart from "./components/Chart";
 import ContactPage from "./ContactPage";
 import { Routes, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
+import MyContext from "./context/MyContext";
 
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
@@ -31,8 +32,11 @@ function App() {
   //   )
   // }
 
+  const sharedValue = 'Hello, world!';
+
+
   return (
-    <div className="App">
+    <MyContext.Provider value={sharedValue}>
       Welcome to your idea board!
       <TopNavBar />
       <Routes>
@@ -40,12 +44,12 @@ function App() {
         <Route path="/ContactPage" element={<ContactPage />} />
         <Route path="/chart" element={<Chart />} />
       </Routes>
-      
-      {/* <Chart /> { /* this is the component, must have return and export default */ }
+
+      {/* <Chart /> { /* this is the component, must have return and export default */}
       {/* {test}  this is just a variable, and doesnt need a return, this is using the value directly */}
       {/* <Test2 test={"a"} />   this is the exact same thing as below, except this is written as HTML component*/}
       {/* {Test2({test: "a"})} This is written as a function, taking in test: a as a object prop */}
-    </div>
+    </MyContext.Provider>
   );
 }
 

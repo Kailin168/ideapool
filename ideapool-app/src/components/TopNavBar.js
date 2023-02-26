@@ -1,8 +1,14 @@
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import MyContext from '../context/MyContext';
+
 
 function TopNavBar() {
+
+  const sharedValue = useContext(MyContext);
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -12,6 +18,7 @@ function TopNavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="Chart">Chart</Nav.Link>
             <Nav.Link href="ContactPage">Contact</Nav.Link>
+            <p style={{background: "white" }}>{sharedValue}</p>
           </Nav>
         </Container>
       </Navbar>
