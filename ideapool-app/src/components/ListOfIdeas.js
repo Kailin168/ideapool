@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import EditModal from './EditModal';
 import Pagination from './Pagination';
+import { useNavigate } from "react-router-dom";
+
 
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
@@ -11,6 +13,15 @@ function ListOfIdeas({ ideas, setIdeas }) {
 
   const [sortKey, setSortKey] = useState('content');
   const [currentPage, setCurrentPage] = useState(1);
+  const [likes, setLikes] = useState(0);
+
+  let navigate = useNavigate();
+
+  const showPostsDetails = (ideaId) => {
+    let path = `/posts/${ideas.id}`;
+    navigate(path);
+  }
+
 
   const itemsPerPage = 5;
 
@@ -36,6 +47,14 @@ function ListOfIdeas({ ideas, setIdeas }) {
   const visibleItems = sortedArray.slice(startIndex, endIndex);
 
 
+  // useEffect(() => {
+  //   fetch(`http://localhost:4000/posts/${ideas.id}`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setIdeas(data)
+  //     });
+  // }, []);
+
 
   return (
     <div>
@@ -52,13 +71,14 @@ function ListOfIdeas({ ideas, setIdeas }) {
             className="d-flex justify-content-between align-items-start"
           >
             <div className="ms-2 me-auto">
-              <div className="fw-bold">Ideas</div>
-              {idea.content}
+              <div onClick={showPostsDetails(idea.id)} className="fw-bold">Ideas</div>
+              {idea.content} 
+              {''}
               {idea.category}
               < EditModal idea={idea} setIdeas={setIdeas} />
             </div>
-            <BsFillArrowUpCircleFill />{' '}
-            <BsFillArrowDownCircleFill />{' '}
+            <BsFillArrowUpCircleFill  value={likes} onClick={() => { setLikes(likes + 1) }} />{' '}
+            <BsFillArrowDownCircleFill value={likes} onClick={() => { setLikes(likes - 1, 0) }} />{' '}
           </ListGroup.Item>
         )
         )}

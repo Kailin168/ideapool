@@ -6,6 +6,8 @@ import ProfileSetting from "./components/ProfileSetting";
 import { Routes, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
 import MyContext from "./context/MyContext";
+import PostDetails from "./components/PostsDetails";
+import NotFound from "./components/NotFound";
 
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
@@ -55,6 +57,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/chart" element={<Chart />} />
         <Route path="/profile" element={<ProfileSetting />} />
+        <Route path="/posts/:postsId" element={<PostDetails />} />
+        <Route path="/posts/*" element={<NotFound />} />
       </Routes>
 
       {/* <Chart /> { /* this is the component, must have return and export default */}
