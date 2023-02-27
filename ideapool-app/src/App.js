@@ -6,7 +6,7 @@ import ProfileSetting from "./components/ProfileSetting";
 import { Routes, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
 import MyContext from "./context/MyContext";
-import PostDetails from "./components/PostsDetails";
+import PostsDetails from "./components/PostsDetails";
 import NotFound from "./components/NotFound";
 
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
@@ -14,6 +14,7 @@ import NotFound from "./components/NotFound";
 function App() {
 
   const [user, setUser] = useState({})
+  const [sortedCategoryType, setSortedCategoryType] = useState('')
 
   // const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
 
@@ -45,7 +46,7 @@ function App() {
 
 
 
-  const contextData = { setUser, user };
+  const contextData = { setUser, user, setSortedCategoryType, sortedCategoryType };
 
 
   return (
@@ -57,7 +58,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/chart" element={<Chart />} />
         <Route path="/profile" element={<ProfileSetting />} />
-        <Route path="/posts/:postsId" element={<PostDetails />} />
+        <Route path="/posts/:postsId" element={<PostsDetails />} />
+        {/* this is where the param is coming from postsId */}
         <Route path="/posts/*" element={<NotFound />} />
       </Routes>
 

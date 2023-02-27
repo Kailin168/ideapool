@@ -6,7 +6,7 @@
       "category": "Science",
       "public": "true",
       "user_id": "1",
-      "likes": "01",
+      "likes": 2,
       "timestamps": "2019-01-01 00:00:00"
     },
     {
@@ -15,7 +15,7 @@
       "category": "Art",
       "public": "true",
       "user_id": "1",
-      "likes": "01",
+      "likes": -2,
       "timestamps": "2019-01-01 00:00:00"
     },
     {
@@ -24,7 +24,7 @@
       "category": "Math",
       "public": "true",
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": "2019-01-01 00:00:00"
     },
     {
@@ -32,7 +32,7 @@
       "category": "",
       "public": false,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1676996270567,
       "id": 4
     },
@@ -41,7 +41,7 @@
       "category": "math",
       "public": false,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1676997273212,
       "id": 5
     },
@@ -50,7 +50,7 @@
       "category": "math",
       "public": false,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1676997695581,
       "id": 6
     },
@@ -59,7 +59,7 @@
       "category": "Technology",
       "public": false,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1676998188545,
       "id": 7
     },
@@ -68,7 +68,7 @@
       "category": "Art",
       "public": true,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1676999380195,
       "id": 8
     },
@@ -77,7 +77,7 @@
       "category": "Art",
       "public": false,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1676999386778,
       "id": 9
     },
@@ -86,7 +86,7 @@
       "category": "Math",
       "public": true,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1677025007448,
       "id": 10
     },
@@ -95,7 +95,7 @@
       "category": "Math",
       "public": true,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1677025011554,
       "id": 11
     },
@@ -104,7 +104,7 @@
       "category": "Math",
       "public": true,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1677025014615,
       "id": 12
     },
@@ -113,7 +113,7 @@
       "category": "Math",
       "public": true,
       "user_id": "1",
-      "likes": "0",
+      "likes": 0,
       "timestamps": 1677025017359,
       "id": 13
     }

@@ -10,7 +10,8 @@ function Details() {
   const [posts, setPosts] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:4000/posts/${params.id}`)
+    fetch(`http://localhost:4000/posts/${params.postsId}`)
+    //this access the id after the : in the path
       .then(response => response.json())
       .then(data => {
         setPosts(data)
