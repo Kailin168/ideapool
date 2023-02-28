@@ -35,7 +35,7 @@ function ListOfIdeas({ ideas, setIdeas }) {
       likes: 'likes',
     };
     const sortProperty = types[type];
-    const sorted = ideas.sort((a, b) => a[sortProperty] < b[sortProperty] ? -1 : 1);
+    const sorted = ideas.sort((a, b) => a[sortProperty] < b[sortProperty] ? 1 : -1);
     return sorted;
   })(contextData.sortedCategoryType);
 
@@ -49,14 +49,6 @@ function ListOfIdeas({ ideas, setIdeas }) {
   const endIndex = startIndex + itemsPerPage;
   const visibleItems = sortedArray.slice(startIndex, endIndex);
 
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:4000/posts/${ideas.id}`)
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setIdeas(data)
-  //     });
-  // }, []);
 
   function handleLikes(idea) {
     idea.likes = idea.likes + 1;
