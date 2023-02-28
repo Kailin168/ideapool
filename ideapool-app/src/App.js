@@ -9,6 +9,8 @@ import MyContext from "./context/MyContext";
 import PostsDetails from "./components/PostsDetails";
 import NotFound from "./components/NotFound";
 import Cookies from 'js-cookie';
+import './darkMode.css';
+
 
 
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
@@ -16,6 +18,7 @@ import Cookies from 'js-cookie';
 function App() {
 
   const [user, setUser] = useState({})
+  const [theme, setTheme] = useState('light');
   const [sortedCategoryType, setSortedCategoryType] = useState('content')
 
   // const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }];
@@ -71,10 +74,22 @@ function App() {
   };
 
 
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
 
 
   return (
-    <MyContext.Provider value={contextData}>
+    <MyContext.Provider value={contextData} className={`App ${theme}`} >
+      {theme === 'light' ? <button onClick={toggleTheme}> Switch to Dark Mode </button> : <button onClick={toggleTheme}> Turn On Light Mode</button>}
       Welcome to your idea board!
       <TopNavBar />
       <Routes>
