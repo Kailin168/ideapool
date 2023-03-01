@@ -15,7 +15,13 @@ function IdeaContainer() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:4000/posts')
+    fetch('http://localhost:4000/posts',
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': 'true',
+      },
+    })
       .then(response => response.json())
       .then(data => {
         setIdeas(data)

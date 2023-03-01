@@ -35,7 +35,12 @@ function ListOfIdeas({ ideas, setIdeas }) {
       likes: 'likes',
     };
     const sortProperty = types[type];
-    const sorted = ideas.sort((a, b) => a[sortProperty] < b[sortProperty] ? 1 : -1);
+    const sorted = ideas.sort((a, b) => {
+      if (a[sortProperty] === b[sortProperty]) {
+        return a.content < b.content ? 1 : -1
+      }
+      return a[sortProperty] < b[sortProperty] ? 1 : -1
+    });
     return sorted;
   })(contextData.sortedCategoryType);
 
@@ -57,6 +62,7 @@ function ListOfIdeas({ ideas, setIdeas }) {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': 'true',
       },
       body: JSON.stringify({ likes: idea.likes }),
     })
@@ -115,7 +121,7 @@ function ListOfIdeas({ ideas, setIdeas }) {
             className="d-flex justify-content-between align-items-start"
           >
             <div className="ms-2 me-auto">
-              <div style={{cursor: "pointer"}} onClick={()=> {showPostsDetails(idea)}} className="fw-bold">Ideas</div>
+              <div style={{ cursor: "pointer" }} onClick={() => { showPostsDetails(idea) }} className="fw-bold">Ideas</div>
               {idea.content}
               {''}
               {idea.category}
