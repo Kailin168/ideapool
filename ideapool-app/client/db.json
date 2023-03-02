@@ -122,6 +122,7 @@
     {
       "id": 1,
       "name": "John Smith",
+      "roles": 1,
       "email": "johndoe@gmail.com",
       "password": "password",
       "timestamps": "2019-01-01 00:00:00"
@@ -129,6 +130,7 @@
     {
       "id": 2,
       "name": "Jane Coltrane",
+      "roles": 2,
       "email": "JaneColtrane@gmail.com",
       "password": "password",
       "timestamps": "2019-01-01 00:00:00"
