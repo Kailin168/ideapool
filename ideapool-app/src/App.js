@@ -6,6 +6,7 @@ import ProfileSetting from "./components/ProfileSetting";
 import { Routes, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
 import MyContext from "./context/MyContext";
+import UserContextProvider from "./context/UserContextProvider";
 import PostsDetails from "./components/PostsDetails";
 import NotFound from "./components/NotFound";
 import Cookies from 'js-cookie';
@@ -88,7 +89,7 @@ function App() {
 
 
   return (
-    <MyContext.Provider value={contextData} className={`App ${theme}`} >
+    <UserContextProvider>
       {theme === 'light' ? <button onClick={toggleTheme}> Switch to Dark Mode </button> : <button onClick={toggleTheme}> Turn On Light Mode</button>}
       Welcome to your idea board!
       <TopNavBar />
@@ -106,7 +107,7 @@ function App() {
       {/* {test}  this is just a variable, and doesn't need a return, this is using the value directly */}
       {/* <Test2 test={"a"} />   this is the exact same thing as below, except this is written as HTML component*/}
       {/* {Test2({test: "a"})} This is written as a function, taking in test: a as a object prop */}
-    </MyContext.Provider>
+    </UserContextProvider>
   );
 }
 

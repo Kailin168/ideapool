@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useContext } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
+
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
+
 import EditModal from './EditModal';
 import Pagination from './Pagination';
 import { useNavigate } from "react-router-dom";
 import MyContext from '../context/MyContext';
-
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
+import { makeRequest } from "../commons/Util";
 
 
 function ListOfIdeas({ ideas, setIdeas }) {
@@ -55,38 +57,60 @@ function ListOfIdeas({ ideas, setIdeas }) {
   const visibleItems = sortedArray.slice(startIndex, endIndex);
 
 
-  function handleLikes(idea) {
+  // function handleLikes(idea) {
+  //   idea.likes = idea.likes + 1;
+  //   setIdeas([...ideas]);
+  //   fetch(`http://localhost:4000/posts/${idea.id}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'ngrok-skip-browser-warning': 'true',
+  //     },
+  //     body: JSON.stringify({ likes: idea.likes }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log('Success:', data);
+  //     });
+  // }
+
+  async function handleLikes(idea) {
     idea.likes = idea.likes + 1;
     setIdeas([...ideas]);
-    fetch(`http://localhost:4000/posts/${idea.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning': 'true',
-      },
-      body: JSON.stringify({ likes: idea.likes }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      });
+    try {
+      await makeRequest(`posts/${idea.id}`, 'PATCH', {}, { likes: idea.likes });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  function handleDislikes(idea) {
+  // function handleDislikes(idea) {
+  //   idea.likes = idea.likes - 1;
+  //   setIdeas([...ideas]);
+  //   fetch(`http://localhost:4000/posts/${idea.id}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({ likes: idea.likes }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log('Success:', data);
+  //     });
+  // }
+
+  async function handleDislikes(idea) {
     idea.likes = idea.likes - 1;
     setIdeas([...ideas]);
-    fetch(`http://localhost:4000/posts/${idea.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ likes: idea.likes }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      });
+    try {
+      await makeRequest(`posts/${idea.id}`, 'PATCH', {}, { likes: idea.likes });
+    } catch (error) {
+      console.log(error);
+    }
   }
+
+
 
   // const handleLikes = (idea) => {
   //   return () => {

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import CreateNewIdeaForm from "./CreateNewIdeaForm";
 import ListOfIdeas from "./ListOfIdeas";
 import SearchBar from "./SearchBar";
-
+import { makeRequest } from "../commons/Util";
 
 function IdeaContainer() {
 
@@ -14,18 +14,30 @@ function IdeaContainer() {
     setIdeas([...ideas, idea]);
   };
 
+  const fetchFromServer = async () => {
+    try {
+      const data = await makeRequest('posts');
+      setIdeas(data);
+    } catch (error) {
+      console.log(error);
+    }
+
+  };
+
   useEffect(() => {
-    fetch('http://localhost:4000/posts',
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning': 'true',
-      },
-    })
-      .then(response => response.json())
-      .then(data => {
-        setIdeas(data)
-      });
+    // fetch('http://localhost:4000/posts',
+    // {
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'ngrok-skip-browser-warning': 'true',
+    //   },
+    // })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setIdeas(data)
+    //   });
+
+  fetchFromServer();     
 
   }, []);
 
