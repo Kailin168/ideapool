@@ -27,7 +27,6 @@ export const makeRequest = async (route, method, headers = {}, body) => {
   const requestBody = body ? JSON.stringify(body) : undefined;
   const requestHeaders = headers;
   requestHeaders['Content-Type'] = headers['Content-Type'] || 'application/json';
-  requestHeaders['ngrok-skip-browser-warning'] = 'true';
 
   try {
     // the try catch is to catch any errors that might occur during the fetch
@@ -50,3 +49,34 @@ export const makeRequest = async (route, method, headers = {}, body) => {
     // if there is an error, log it to the console
   }
 };
+
+// export const makeRequest = (route, method, headers = {}, body) => {
+//   return new Promise((resolve, reject) => {    
+//     const newRoute = route && route.length > 0 && route[0] === '/' ? route : `/${route}`;
+//     const url = `${URL}${newRoute}`;
+//     // const url = useFakeData ? 'http://localhost:4000/posts' : `https://finnhub.io/api/v1/search?q=${stockTicker}&token=${API_KEY}`;
+
+//     const requestBody = body ? JSON.stringify(body) : undefined;
+//     const requestHeaders = headers;
+//     requestHeaders['Content-Type'] = headers['Content-Type'] || 'application/json';
+
+//     fetch(url, {
+//       method: method || 'GET',
+//       headers: requestHeaders,
+//       body: requestBody,
+//     }).then(response => {
+//       if (response.status >= 200 && response.status <= 299) { // 2xx
+//         return response.json();
+//       } else { // 4xx, 5xx 
+//         throw new Error(response.statusText);
+//       }
+//     })
+//       .then(data => {
+//         resolve(data);
+//       })
+//       .catch(error => {
+//         reject(error);
+//       });
+//   });
+
+// };

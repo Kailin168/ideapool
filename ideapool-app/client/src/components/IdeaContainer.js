@@ -22,6 +22,14 @@ function IdeaContainer() {
       console.log(error);
     }
 
+    // makeRequest('posts')
+    // .then(data => {
+    //   setIdeas(data);
+    // })
+    // .catch(error => {
+    //   console.log(error);
+    // });
+
   };
 
   useEffect(() => {

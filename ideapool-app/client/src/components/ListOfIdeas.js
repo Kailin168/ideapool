@@ -146,9 +146,12 @@ function ListOfIdeas({ ideas, setIdeas }) {
           >
             <div className="ms-2 me-auto">
               <div style={{ cursor: "pointer" }} onClick={() => { showPostsDetails(idea) }} className="fw-bold">Ideas</div>
-              {idea.content}
-              {''}
-              {idea.category}
+              <div className='idea-content'>
+                {idea.content}
+              </div>
+              <div className='idea-category'>
+                {idea.category}
+              </div>
               < EditModal idea={idea} setIdeas={setIdeas} />
             </div>
             <BsFillArrowUpCircleFill onClick={() => { handleLikes(idea) }} />{' '}
