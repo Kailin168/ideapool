@@ -18,6 +18,7 @@ function ListOfIdeas({ ideas, setIdeas }) {
 
   // const [sortKey, setSortKey] = useState('content');
   const [currentPage, setCurrentPage] = useState(1);
+  
   const [likes, setLikes] = useState(0);
 
   let navigate = useNavigate();
